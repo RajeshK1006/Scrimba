@@ -1,2 +1,2 @@
-# Srimba
+# Scrimba
 front-end solo projects 
