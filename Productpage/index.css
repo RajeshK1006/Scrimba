@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    background-color: #A26786;
+    width: auto;
+    height: 100%;
+    border: 1px solid #2A242E ;
+    padding: 5px;
+
+}
+
+.nav-bar{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn{
+    border: None;
+    color: black;
+    background-color: #72465D;
+    padding: 10px 20px;
+    margin: 10px 25px;
+    border-radius: 8px;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pricing{
+    display: block;
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom:10px;
+    text-align: center;
+
+}
+
+.brand-Name{
+    margin-top: 70px;
+}
+
+.brand{
+    color: #2A242E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 10px 0px;
+
+}
+
+.buying{
+    display: block;
+    width: 175px;
+    margin-top:70px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.shopp-logo{
+    border: 3px solid #2A242E;
+    border-radius: 100%;
+
+}
+
+.buy-btn{
+    border: None;
+    color: black;
+    background-color: #72465D;
+    padding: 10px 20px;
+    margin: 10px 25px;
+    border-radius: 8px;
+}
+.offers{
+    margin:10px 40px;
+}
+
+.flex-box2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.bank-offer{
+    width: 400px;
+    border:2px solid #2A242E ;
+    color: #2A242E;
+    text-align: center;
+    border-radius: 15px;
+
+    
+}
+.EMI{
+    width: 400px;
+    border:2px solid #2A242E ;
+    color: #2A242E;
+    text-align: center;
+    border-radius: 15px;
+
+    
+}
+.debit{
+    width: 400px;
+    border:2px solid #2A242E ;
+    color: #2A242E;
+    text-align: center;
+    border-radius: 15px;
+
+    
+}
+
+.box-cnt{
+    margin: 20px 0px;
+    padding: 10px;
+}
+.head{
+    margin: 10px 0px;
+}
+
+
+
+
