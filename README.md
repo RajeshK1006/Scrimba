@@ -1,2 +1,2 @@
 # Scrimba
-front-end solo projects 
+front-end solo projects.
