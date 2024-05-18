@@ -1,7 +1,12 @@
 // calculatoor app
 
-let value = document.getElementById("calc")
+let displayValue = document.getElementById("calc");
 
 function takeValue(v){
-    value.value = v;
+    displayValue.value += v;
+}
+
+
+function clear(){
+    displayValue.value = "";
 }
