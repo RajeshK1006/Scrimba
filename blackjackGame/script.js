@@ -3,51 +3,106 @@
 // grater than 21 game out
 // ace = 11
 // king  = 10
+let arr = []
+let inGame = false
+let bJack = false
+let messageEl = document.getElementById("message-el")
+let cardEl = document.getElementById("card-el")
+let sumEl = document.getElementById("sum-el")
+let message = "" 
+let sum =0
 
-let fCard = 10;
-let sCard = 7;
-let message = "";
-
-let sum = fCard+sCard
-let card = document.querySelector("#card-el")
 
 
-let hasBlackjack = false;
-let isAlive = true;
-let  messageEl = document.getElementById("message-el")
-let sumEl = document.querySelector("#sum-el")
+function generateRandom(){
+    let v = Math.floor(Math.random()*13 +1)
+
+    if (v==1){
+    return 11
+    }
+    else if (v>10){
+        return 10
+    }
+    else{
+        return v
+    }
+
+}
+
+function checkbJack(){
+    if (sum<21){
+        message = "Do you want to draw a new card? 🙂"
+    }
+    else if (sum==21){
+        message = "Wohoo! You've got Blackjack! 🥳"
+    }
+    else{
+        message = "You're out of the game Please 'PRESS RESET BUTTON'"
+        inGame=false
+        bJack = false
+    }
+
+    return message
+}
 
 function startGame(){
     renderGame()
 }
 
-function renderGame(){
-    card.textContent = "Card: "  + fCard + " " + sCard
-    if (sum<21){
-        message = "Do you want to draw a new card? 🙂"
-        isAlive = true;
-    }
-    else if(sum==21){
-        message = "Wohoo! You've got Blackjack! 🥳"
-        hasBlackjack=true;
-        isAlive = true;
-       
-    }
-    else{
-        message = "You're out of the game! 😭"
-        isAlive = false;
-    }
 
-    messageEl.textContent = message
-    sumEl.textContent = "Sum: " + sum
+function renderGame(){
+    if (inGame === false && bJack === false){
+
+        let fCard = generateRandom()
+        let sCard = generateRandom()
+
+        arr[0] = fCard
+        arr[1] = sCard
+        sum = arr[0] + arr[1]
+
+        if (sum<21){
+            inGame =true
+            // message = "Do you want to draw a new card? 🙂"
+            
+        }
+        else if (sum==21){
+            bJack = true
+            // message = "Wohoo! You've got Blackjack! 🥳"
+        }
+        else{
+            inGame = false
+            // message = checkbJack()
+        }
+
+        messageEl.textContent = checkbJack()
+        sumEl.textContent += " "  +sum
+        cardEl.textContent += " " + arr[0] + " " + arr[1]
+    
+    }
 }
+
+
+
+
 
 function newCard(){
-    let newCard = 7
-    sum += newCard
-    renderGame()
+    if(inGame ===true && bJack ===false){
+    let nCard = generateRandom()
+    sum += nCard
+    arr.push(nCard)
+    messageEl.textContent = checkbJack()
+    cardEl.textContent += " " + nCard
+    sumEl.textContent ="Sum: "+ sum 
+    }
 }
 
-// cash out!
-// console.log(messageEl)
-// messageEl.textContent += 1
+function reFresh(){
+    sumEl.textContent ="Sum: "
+    messageEl.textContent = "Do you wanna play a round?"
+    cardEl.textContent = "Cards: "
+    inGame = false
+    bJack = false
+}
+
+
+

@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackJackGame</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="images/index.css">
 </head>
 <body>
     <div class="main">
+        
         <div class="textClass">
-        <h1 id = "nameEl"> <span id = "gameName">BlackJackGame</span></h1>
-        <p class="para" id="message-el">Want to play a around ?</p>
-        <p class="para" id = "card-el">Cards: </p>
-        <p class="para" id = "sum-el">Sum: </p>
-        <div class="btn">
-        <button class="startBtn" type="button" onclick="startGame()">Start Game</button>
-        <button class="cardBtn" type="button" onclick="newCard()">NewCard</button>
+        <div class="texts">  
+            <h1 id = "nameEl"> <span id = "gameName">BlackJackGame</span></h1>
+            <p class="para" id="message-el">Want to play a around ?</p>
+            <p class="para" id = "card-el">Cards: </p>
+            <p class="para" id = "sum-el">Sum: </p>
         </div>
-        </div>  
+        <div class="btn">
+            <button class="startBtn" type="button" onclick="startGame()">Start Game</button>
+            <button class="cardBtn" type="button" onclick="newCard()">NewCard</button>
+            <button class="cardBtn" type="button" onclick="reFresh()">Reset Game</button>
+        </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
