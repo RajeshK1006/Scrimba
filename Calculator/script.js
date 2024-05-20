@@ -10,3 +10,4 @@ function takeValue(v){
 function clear(){
     displayValue.value = "";
 }
+
